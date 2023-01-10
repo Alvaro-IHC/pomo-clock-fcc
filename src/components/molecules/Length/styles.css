@@ -1,0 +1,7 @@
+.break-length-container {
+  grid-area: break;
+}
+
+.session-length-container {
+  grid-area: session;
+}

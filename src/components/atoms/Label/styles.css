@@ -1,0 +1,11 @@
+.label {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.title {
+  grid-area: title;
+  font-size: 5rem;
+}

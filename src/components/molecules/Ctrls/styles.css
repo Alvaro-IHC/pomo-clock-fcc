@@ -1,0 +1,5 @@
+.ctrls {
+  grid-area: ctrl;
+  display: flex;
+  gap: 2rem;
+}
