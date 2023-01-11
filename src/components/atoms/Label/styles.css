@@ -9,3 +9,7 @@
   grid-area: title;
   font-size: 5rem;
 }
+
+.ctrl-label {
+  width: 5rem;
+}

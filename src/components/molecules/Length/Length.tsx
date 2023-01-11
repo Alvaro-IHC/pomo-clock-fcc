@@ -1,4 +1,4 @@
-import { ILength } from "../../../utils/helpers/interfaces";
+import { ILength } from "../../../utils/interfaces";
 import { Label } from "../../atoms/Label/Label";
 import { LengthCtrl } from "../LengthCtrl/LengthCtrl";
 import "./styles.css";
