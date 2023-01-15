@@ -68,7 +68,6 @@ function App() {
         </Label>
         <Length type='break' value={breakValue} />
         <Length type='session' value={sessionValue} />
-        {/* <Clock type={session ? "session" : "break"}> */}
         <Clock type={label}>{getTime(timeCounter)}</Clock>
         <Ctrls />
         <audio id='beep' className='clip' src={"/beep.wav"}></audio>
