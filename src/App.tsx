@@ -11,8 +11,8 @@ export const StateContext = React.createContext({} as IStateContext);
 
 function App() {
   const [active, setActive] = useState(false);
-  const [breakValue, setBreakValue] = useState(5);
-  const [sessionValue, setSessionValue] = useState(25);
+  const [breakValue, setBreakValue] = useState(1);
+  const [sessionValue, setSessionValue] = useState(1);
   const [timeCounter, setTimeCounter] = useState(sessionValue * 60);
   const [label, setLabel] = useState("session");
   let session = true;
@@ -25,6 +25,10 @@ function App() {
   const handleTime = (ses: boolean) => {
     setTimeCounter((previous) => {
       if (previous - 1 < 0) {
+        const audio = document.getElementById(
+          "beep"
+        ) as HTMLAudioElement | null;
+        audio?.play();
         clearInterval(intervalID.current);
         startTimer();
         if (ses) {
@@ -67,6 +71,7 @@ function App() {
         {/* <Clock type={session ? "session" : "break"}> */}
         <Clock type={label}>{getTime(timeCounter)}</Clock>
         <Ctrls />
+        <audio id='beep' className='clip' src={"src/assets/beep.wav"}></audio>
       </div>
     </StateContext.Provider>
   );

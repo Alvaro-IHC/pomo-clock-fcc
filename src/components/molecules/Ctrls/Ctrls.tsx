@@ -19,6 +19,7 @@ export const Ctrls = () => {
   const handlePlayPause = () => {
     if (active) {
       clearInterval(intervalID.current);
+      setTimeCounter((previous) => previous + 1);
     } else {
       startTimer();
     }
@@ -28,6 +29,11 @@ export const Ctrls = () => {
   const handleReset = () => {
     if (active) {
       clearInterval(intervalID.current);
+    }
+    const audio = document.getElementById("beep") as HTMLAudioElement | null;
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
     }
     setActive(false);
     setBreakValue(5);
