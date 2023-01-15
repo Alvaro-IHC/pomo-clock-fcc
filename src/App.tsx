@@ -71,7 +71,7 @@ function App() {
         {/* <Clock type={session ? "session" : "break"}> */}
         <Clock type={label}>{getTime(timeCounter)}</Clock>
         <Ctrls />
-        <audio id='beep' className='clip' src={"src/assets/beep.wav"}></audio>
+        <audio id='beep' className='clip' src={"/beep.wav"}></audio>
       </div>
     </StateContext.Provider>
   );
