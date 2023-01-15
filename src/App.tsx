@@ -11,8 +11,8 @@ export const StateContext = React.createContext({} as IStateContext);
 
 function App() {
   const [active, setActive] = useState(false);
-  const [breakValue, setBreakValue] = useState(1);
-  const [sessionValue, setSessionValue] = useState(1);
+  const [breakValue, setBreakValue] = useState(5);
+  const [sessionValue, setSessionValue] = useState(25);
   const [timeCounter, setTimeCounter] = useState(sessionValue * 60);
   const [label, setLabel] = useState("session");
   let session = true;
@@ -45,7 +45,7 @@ function App() {
   };
 
   const startTimer = () => {
-    intervalID.current = setInterval(handleTime, 100, session);
+    intervalID.current = setInterval(handleTime, 1000, session);
   };
 
   const value = {
