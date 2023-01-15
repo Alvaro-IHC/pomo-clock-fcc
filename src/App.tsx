@@ -70,7 +70,11 @@ function App() {
         <Length type='session' value={sessionValue} />
         <Clock type={label}>{getTime(timeCounter)}</Clock>
         <Ctrls />
-        <audio id='beep' className='clip' src={"/beep.wav"}></audio>
+        <audio
+          id='beep'
+          className='clip'
+          src={"/pomo-clock-fcc/beep.wav"}
+        ></audio>
       </div>
     </StateContext.Provider>
   );
